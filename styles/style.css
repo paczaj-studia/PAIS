@@ -111,7 +111,7 @@ h1 {
 .sidebar {
   position: fixed;
   background-color: hsla(196, 20%, 29%, 0.24);
-  background-color: rgb(14, 155, 206);
+  background-color: rgb(4, 41, 54);
   width: 200px;
   margin-left: -300px;
   transition: margin 0.5s ease;
