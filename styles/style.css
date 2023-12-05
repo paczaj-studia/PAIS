@@ -22,7 +22,7 @@ h6 {
 }
 
 h1 {
-  font-size: 3rem;
+  font-size: 2.8rem;
 }
 .app_wrapper {
   display: grid;
@@ -111,7 +111,7 @@ h1 {
 .sidebar {
   position: fixed;
   background-color: hsla(196, 20%, 29%, 0.24);
-  background-color: hsla(196, 20%, 29%, 1);
+  background-color: rgb(14, 155, 206);
   width: 200px;
   margin-left: -300px;
   transition: margin 0.5s ease;
