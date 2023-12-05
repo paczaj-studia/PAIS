@@ -1,0 +1,53 @@
+:root {
+  --main-color: hsl(174, 99%, 28%);
+}
+html {
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ol,
+ul {
+  margin: 0;
+  padding: 0;
+  font-weight: normal;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+.btn {
+  background: transparent;
+  font-size: 1.1rem;
+  font-family: 'Inter Tight', sans-serif;
+  border-radius: 10px;
+  border: solid 2px rgb(65, 63, 63);
+  box-shadow: 0 3px 3px rgba(0, 0, 0, 0.568);
+  padding: 7px 13px;
+  cursor: pointer;
+  transition: background-color 0.5s ease;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
