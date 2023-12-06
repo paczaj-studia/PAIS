@@ -7,6 +7,8 @@ mobile_menu_button.addEventListener("click", function(){
 
     });
 
+    
+
     // function load_home (e) {
     //     (e || window.event).preventDefault();
     
