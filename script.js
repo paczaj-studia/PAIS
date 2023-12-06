@@ -1,12 +1,9 @@
-const btn = document.querySelector('button')
+// Showing and hidding mobile menu
+const mobile_menu_button = document.querySelector('.btn.btn-mobile_menu')
 
-// document.querySelector('button.btn-mobile_menu').addEventListener('click', ()=>(
-//     console.log('dupa')
-    
-// ))
-
-btn.addEventListener("click", function(){
+mobile_menu_button.addEventListener("click", function(){
     document.querySelector(".sidebar").classList.toggle("sidebar_visible")
+    mobile_menu_button.classList.toggle('opened')
+
     });
 
-// console.log(a);
