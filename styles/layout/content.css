@@ -1,0 +1,14 @@
+.content {
+  grid-column-start: 1;
+  grid-column-end: 6;
+  background-color: hsla(0, 0%, 23%, 0.7);
+  padding: 10px 20px;
+}
+
+@media screen and (min-width: 768px) {
+
+  .content {
+    grid-column-start: 2;
+  }
+
+}

@@ -7,61 +7,98 @@
     <title>Praca PAIS I</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css" />
     <link rel="stylesheet" href="./styles/style.css" />
+    <link href="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/themes/prism.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/9000.0.1/themes/prism-okaidia.min.css"
+        integrity="sha512-5HvW0a7ihK3ro2KhwEksDHXgIezsTeZybZDIn8d8Y015Ny+t7QWSIjnlCTjFzlK7Klb604HLGjsNqU/i5mJLjQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/plugins/line-numbers/prism-line-numbers.min.css">
+        <script>
+            var block = document.querySelector('.language-css')
+        Prism.highlightElement(block);
+        
+        </script>
 </head>
 
-<body>
-    <main class="app_wrapper">
-        <nav class="top_navigation">
+<body class="line-numbers">
+    <div class="app">
+        <header>
             <div class="logo">
                 <h2>PAIS</h2>
                 <span>Zadanie 1</span>
             </div>
-            <!-- Mobile nav toggle button -->
-            <button type="button" class="btn btn-mobile_menu">
-                <i class="ti ti-menu-2"></i>
-
-            </button>
-            <div class="dropdown_wrapper">
-                <div class="top_menu-item">
-                    <p class="btn">
-                        <i class="ti ti-layout-board-split"></i>
-                        <span>Grid</span>
-                    </p>
-                </div>
-                <div class="top_menu-item">
-                    <p class="btn">
-                        <i class="ti ti-layout-grid"></i>
-                        <span>Flex</span>
-                    </p>
-                </div>
-            </div>
+            <nav class="top_navigation">
+                <button class="btn btn-big top_navigation-item active" data-target="examples-grid">
+                    <i class="ti ti-layout-board-split"></i>
+                    <span>Grid</span>
+                </button>
+                <button class="btn btn-big top_navigation-item" data-target="examples-flex">
+                    <i class="ti ti-layout-grid"></i>
+                    <span>Flex</span>
+                </button>
+            </nav>
             <div class="author">
                 <div class="avatar">
                     <img src="./assets/images/paczaj2.JPG" alt="avatar" />
                 </div>
                 <span>Marcin <br />Paczkowski</span>
             </div>
-        </nav>
-        <div class="sidebar">
-            <ul>
-                <li>Przykład 1</li>
-                <li>Przykład 1</li>
-                <li>Przykład 1</li>
-                <li>Przykład 1</li>
-                <li>Przykład 1</li>
-                <li>Przykład 1</li>
-                <li>Przykład 1</li>
-            </ul>
-        </div>
-        <div class="content">
-            <h1>qwqwfd 33</h1>
-            <a href="page2.html">2r2rew</a>
-            <div class="example_container"></div>
-        </div>
+        </header>
+        <aside class="sidebar">
+            <button type="button" class="btn btn-mobile_menu">
+                <i class="ti ti-menu-2"></i>
+            </button>
+            <div class="examples_list examples-grid active">
+                <h3>Przykłady GRID</h3>
+                <ul>
+                    <li class="examples_list-item" data-example="example-grid-1" data-example-class="example-1">Przykład
+                        1 grid</li>
+                    <li class="examples_list-item" data-example="example-grid-2" data-example-class="example-2">Przykład
+                        1</li>
+                    <li class="examples_list-item" data-example="example-grid-3" data-example-class="example-3">Przykład
+                        1</li>
 
+                </ul>
+            </div>
+            <div class="examples_list examples-flex">
+                <h3>Przykłady Felx</h3>
+                <ul>
+                    <li class="examples_list-item" data-example="example-flex-1" data-example-class="example-2">Przykład
+                        1</li>
+                    <li class="examples_list-item" data-example="example-flex-1" data-example-class="example-2">Przykład
+                        1</li>
+                    <li class="examples_list-item" data-example="example-flex-1" data-example-class="example-2">Przykład
+                        1</li>
+                </ul>
+            </div>
+        </aside>
+        <main class="content">
+            <h2>Content</h2>
+            <pre><code class="language-css">p {
+background: transparent;
+font-size: 1rem;
+font-family: "Inter Tight", sans-serif;
+border-radius: 5px;
+border: solid 1px rgb(65, 63, 63);
+box-shadow: 0 2px 3px rgba(0, 0, 0, 0.568);
+padding: 5px 9px;
+                cursor: pointer;
+                transition: background-color 0.5s ease;
+                display: flex;
+                align-items: center;
+                gap: 5px;
+              }</code></pre>
+            <div class="example_container"></div>
+        </main>
         <footer>footer</footer>
-    </main>
+    </div>
+    <div class="overlay"></div>
     <script src="./script.js"></script>
+    <script src="
+https://cdn.jsdelivr.net/npm/prismjs@1.29.0/prism.min.js
+"></script>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/plugins/line-numbers/prism-line-numbers.min.js"></script>
+
 </body>
 
 </html>
