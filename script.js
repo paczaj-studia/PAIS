@@ -34,25 +34,27 @@ mobile_menu_button.addEventListener("click", function(){
 
       });
 
-//   async  function load_home (example) {
-//         // (e || window.event).preventDefault();
+  async  function load_home2 (example) {
+        // (e || window.event).preventDefault();
     
-//         fetch(`./examples/${example}.html` /*, options */)
-//         .then((response) => console.log(response.text()))
-//         .then((html) => {
-//             document.getElementsByClassName("content").innerHTML = html;
-//         })
-//         .catch((error) => {
-//             console.warn(error);
-//         });
-//     } 
+        fetch(`./examples/${example}.html` )
+        .then((response) => response.text())
+        .then((html) => {
+            document.querySelector(".content").innerHTML = html;
+            Prism.highlightAll();
+        })
+        .catch((error) => {
+            console.warn(error);
+            document.querySelector(".content").innerHTML = "error";
+        });
+    } 
 const content = document.querySelector(".content");
     async function load_home(example, example_class) {
         let url = `./examples/${example}.html`
         
         content.innerHTML = await (await fetch(url)).text();
         // content.classList.remove(...content.classList);
-        content.setAttribute("class", "")
+        content.setAttribute("class", "content")
         content.classList.add(example_class)
         Prism.highlightAll();
       }
@@ -61,7 +63,7 @@ const content = document.querySelector(".content");
     // console.log(menu_examples);
     menu_examples.forEach(menu_example => {
 
-        menu_example.addEventListener('click', ()=>{
+        menu_example.addEventListener('click', async()=>{
             if (!menu_example.classList.contains('active')) {
             menu_examples.forEach((el)=>{
             
@@ -70,7 +72,8 @@ const content = document.querySelector(".content");
                 // }
         }),
             menu_example.classList.add('active')
-            load_home(menu_example.dataset.example, menu_example.dataset.exampleClass)
+            // load_home(menu_example.dataset.example, menu_example.dataset.exampleClass)
+         await(await   load_home2(menu_example.dataset.example))
           
     }
     })
